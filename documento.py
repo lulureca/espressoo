@@ -7,10 +7,9 @@ class Pergunta1:
         }
 
     def apresentar_dados(self):
-        print("você gosta de café?")
+        print("Você gosta de café?")
         for resposta, percentual in self.respostas.items():
             print(f"{resposta.capitalize()} {percentual}")
-
 
 
 class Pergunta2:
@@ -19,13 +18,13 @@ class Pergunta2:
             "1-3": 12,
             "3/mais": 5,
             "quase nunca": 7,
-            "nenhuma das alternativas":5
-
+            "nenhuma das alternativas": 5
         }
+
     def apresentar_dados2(self):
-        print("Com quanta frência você toma café?")
+        print("Com quanta frequência você toma café?")
         for resposta, percentual in self.respostas2.items():
-            print (f"{resposta.capitalize()}: {percentual}")
+            print(f"{resposta.capitalize()}: {percentual}")
 
 
 class Pergunta3:
@@ -43,33 +42,32 @@ class Pergunta3:
 
 class Pergunta4:
     def _init_(self):
-        self.respostas4 ={
+        self.respostas4 = {
             "1-3": 15,
             "5/mais": 4,
             "3-5": 2,
-            "nenhuma das alternativa":8
-
+            "nenhuma das alternativas": 8
         }
+
     def apresentar_dados4(self):
-        print ("Quantas xícaras de café você tomar por dia?")
+        print("Quantas xícaras de café você toma por dia?")
         for resposta, percentual in self.respostas4.items():
             print(f"{resposta.capitalize()}: {percentual}")
 
 
 class Pergunta5:
     def _init_(self):
-        self.respostas5 ={
-            "açúcar":17,
-            "leite ou leite em pó":3,
-            "outros":4,
-            "não adoça":4
-
+        self.respostas5 = {
+            "açúcar": 17,
+            "leite ou leite em pó": 3,
+            "outros": 4,
+            "não adoça": 4
         }
+
     def apresentar_dados5(self):
         print("Como você adoça seu café?")
         for resposta, percentual in self.respostas5.items():
             print(f"{resposta.capitalize()}: {percentual}")
-
 
 
 def calcular_media(respostas):
@@ -81,6 +79,7 @@ def calcular_moda(respostas):
     frequencias = {x: valores.count(x) for x in valores}
     moda = [k for k, v in frequencias.items() if v == max(frequencias.values())]
     return moda
+
 
 def calcular_mediana(respostas):
     valores = sorted(respostas.values())
@@ -158,6 +157,4 @@ def todas_as_respostas():
     # Exibir as estatísticas
     exibir_estatisticas(p1, p2, p3, p4, p5)
 
-
-# Chama a função para exibir os dados e as estatísticas
 todas_as_respostas()
